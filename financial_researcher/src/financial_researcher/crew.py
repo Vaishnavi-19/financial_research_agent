@@ -14,7 +14,9 @@ class ResearchCrew:
     def researcher(self) -> Agent:
         return Agent(
             config=self.agents_config['researcher'],
-            verbose=True
+            verbose=True,
+            tools = [SerperDevTool()]
+
             
         )
 
@@ -35,7 +37,7 @@ class ResearchCrew:
     def analysis_task(self) -> Task:
         return Task(
             config=self.tasks_config['analysis_task'],
-            output_file='output/reportTelsa.md'
+            output_file='output/reportTesla.md'
         )
 
     @crew
